@@ -8,7 +8,7 @@ The general flow of things might be -
 
 3) Documentation of the new ui URL's (tbd)
 
-#### 1: About Application passwords and application tokens
+## 1: About Application passwords and application tokens
 ### Using application passwords and application tokens
 
 Non-browser applications can use long-lived application passwords or application tokens to authenticate users, so the users do not
