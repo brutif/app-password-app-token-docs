@@ -6,7 +6,7 @@ The general flow of things might be -
 1) What they are and how to choose (below)
 2) Links to detailed configuration instructions (links below)
 
-3) Documentation of the new ui URL's (tbd)
+3) Documentation of the new web ui URL's (below)
 
 ## 1: About Application passwords and application tokens
 ### Using application passwords and application tokens
@@ -24,5 +24,7 @@ Application passwords are not used directly but are exchanged repetitvely for sh
 [app-passwords](./app-passwords.md)
 
 [app-tokens](./app-tokens.md)
+
+[web pages for users and administration](./webui.md)
 
 
