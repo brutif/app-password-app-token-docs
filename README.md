@@ -12,7 +12,7 @@ The general flow of things might be -
 ### Using application passwords and application tokens
 
 Non-browser applications can use long-lived application passwords or application tokens to authenticate users, so the users do not
-have to supply their password to the non-browser application.  Users first authenticate to the OpenID Connect provider using a REST interface and obtain a long-lived application password or application token.  Next, the token or password is supplied to the non-browser application. The application can use these to authenticate on the user's behalf and access resources that are protected by OpenID Connect.   The user's password is never exposed to the non-browser application. Application passwords and application tokens can be revoked if necessary without changing the user's password.
+have to supply their password to the non-browser application.  Users first authenticate to the OpenID Connect provider using a REST or web interface and obtain a long-lived application password or application token.  Next, the token or password is supplied to the non-browser application. The application can use these to authenticate on the user's behalf and access resources that are protected by OpenID Connect.   The user's password is never exposed to the non-browser application. Application passwords and application tokens can be revoked if necessary without changing the user's password.
 
 ### Choosing application passwords or application tokens
 
