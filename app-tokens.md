@@ -92,7 +92,7 @@ Location: https://localhost:19045/oidcclient/redirect/RP#scope=profile&access_to
       Accept: application/json
       access_token: 2cuQ5GqI9GorM7XXVl62t2UvkFjA9J5iX0YWXQri
 
-      used_by=RP
+      app_name=RP
 
       HTTP/1.1 200 OK
       {"app_token":"xuZtiWoJIiXfGxY9lJgWzryVuoSQgFWUEs8f4IGh","app_id":"iHoDV5mgbCfJdNxL3TTucA2ewM0VmjYaLxpvFAB2","created_at":"1556733579572","expires_at":"1564509579572"}
