@@ -80,9 +80,11 @@ Location: https://localhost:19045/oidcclient/redirect/RP#scope=profile&access_to
  
   - Request app-tokens:
       - The authorization header contains the base64 encoded client id and secret.
-      - The access_token header contains  the short-lived access token that identifies an authenticated user.      
+      - The access_token header contains  the short-lived access token that identifies an authenticated user. 
+      - app_name - a convenience name to help the user remember the purpose of the token.     
       - used_by - optional. The client id that will be using the app-token.           
-         - If specified for an app-token, only that client can introspect the app-token.     
+         - If specified, only that client can introspect the app-token. 
+         - If not specified, the first client to use the token is the only client that can introspect the app-token.    
 
       ```   
       POST /oidc/endpoint/OP/app-tokens HTTP/1.1
@@ -92,7 +94,7 @@ Location: https://localhost:19045/oidcclient/redirect/RP#scope=profile&access_to
       Accept: application/json
       access_token: 2cuQ5GqI9GorM7XXVl62t2UvkFjA9J5iX0YWXQri
 
-      app_name=RP
+      app_name=mytestapp1&used_by=client_04
 
       HTTP/1.1 200 OK
       {"app_token":"xuZtiWoJIiXfGxY9lJgWzryVuoSQgFWUEs8f4IGh","app_id":"iHoDV5mgbCfJdNxL3TTucA2ewM0VmjYaLxpvFAB2","created_at":"1556733579572","expires_at":"1564509579572"}
