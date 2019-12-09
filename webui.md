@@ -57,3 +57,5 @@ When application tokens are generated, their scope is set to the preAuthorizedSc
      </localStore>
   </oauthProvider>
   
+## Note:
+To create entries containing non-ascii characters using the UI, it may be necessary to create a jvm.options file at the root of the liberty server containing **-Ddefault.client.encoding=UTF-8**
