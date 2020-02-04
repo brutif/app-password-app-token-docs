@@ -8,7 +8,8 @@ The following web UI pages are available:
 
 ```https://host:port/[provider id]/usersTokenManagement``` allows administrators in the tokenManager role to list and revoke application passwords and application tokens of other users. 
 
-The personalTokenManagement and usersTokenManagement pages require the OAuth configuration attributes ```internalClientId``` and ```internalClientSecret``` to be set to the id and secret of a valid OAuth client. These will be used to generate an access token for for the web UI  to call the REST APIs. 
+The personalTokenManagement and usersTokenManagement pages require the OAuth configuration attributes ```internalClientId``` and ```internalClientSecret``` to be set to the id and secret of a valid OAuth client. This client needs to be created manually, like any other client, before use.  The```https://host:port/[provider id]/clientManagement``` endpoint can be used to create it, or it can be created using the REST API. 
+The internal client id and secret will be used to generate an access token for for the web UI  to call the REST APIs. 
 
 When application tokens are generated, their scope is set to the preAuthorizedScope value of the client. 
 
