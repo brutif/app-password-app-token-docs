@@ -13,6 +13,8 @@ The internal client id and secret will be used to generate an access token for f
 
 When application tokens are generated, their scope is set to the preAuthorizedScope value of the client. 
 
+The UI can only manage app-passwords and tokens created by the client specified by internalClientId.  App-passwords and tokens created by other clients will not be visible in the UI. 
+
  ## Example configuration using database store:
   ```
     <openidConnectProvider id="OP" oauthProviderRef="Oauth"  signatureAlgorithm="RS256" jwkEnabled="true">
