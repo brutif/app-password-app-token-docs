@@ -58,6 +58,18 @@ When application tokens are generated, their scope is set to the preAuthorizedSc
      </localStore>
   </oauthProvider>
   
+  <oauth-roles>
+        <authenticated>
+            <special-subject type="ALL_AUTHENTICATED_USERS" />  
+        </authenticated>
+        <clientManager>
+            <user name="testuser" />
+        </clientManager>
+        <tokenManager>
+           <user name="testuser" />
+        </tokenManager>
+  </oauth-roles>
+  
 ```
 
 ## Note:
