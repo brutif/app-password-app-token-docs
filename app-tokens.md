@@ -59,7 +59,8 @@ An OAuth access token is required to use the REST endpoints. It can be obtained 
    - If your application is protected by an OpenID Connect client, your application can use the [Propagation Helper API](https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.javadoc.liberty.doc/com.ibm.websphere.appserver.api.oidc_1.0-javadoc/com/ibm/websphere/security/openidconnect/PropagationHelper.html) to obtain the access token that it obtained from the provider. 
    - You can request an access token from the Provider directly using an implicit flow 
        - The authorization header contains the base64 encoded user id and password. 
-       - The scope parameter must be a preAuthorizedScope in the client configuration  
+       - The scope parameter must be a preAuthorizedScope in the client configuration
+   - The lifetime of the token is specified by the "accessTokenLifetime" parameter in the OAuth configuration. 
 
 implicit flow example:       
 ```     
@@ -84,7 +85,8 @@ Location: https://localhost:19045/oidcclient/redirect/RP#scope=profile&access_to
       - app_name - a convenience name to help the user remember the purpose of the token.     
       - used_by - optional. The client id that will be using the app-token.           
          - If specified, only that client can introspect the app-token. 
-         - If not specified, the first client to use the token is the only client that can introspect the app-token.    
+         - If not specified, the first client to use the token is the only client that can introspect the app-token.
+      - Note that the client must support the "password" grant type for the request to be allowed.
 
       ```   
       POST /oidc/endpoint/OP/app-tokens HTTP/1.1
